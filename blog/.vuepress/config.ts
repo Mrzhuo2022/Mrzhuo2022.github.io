@@ -44,7 +44,7 @@ export default defineUserConfig({
   bundler: viteBundler(),
 
   theme: gungnirTheme({
-    navbarTitle: "Evarle blog",
+    navbarTitle: "Evarle",
     repo: "Mrzhuo2022/Mrzhuo2022.github.io",
     docsDir: "blog",
     docsBranch: "main",
@@ -55,7 +55,7 @@ export default defineUserConfig({
     personalInfo: {
       name: "Evarle",
       avatar: "/img/avatar.jpg",
-      description: "Evarle's blog",
+      description: "心有所期，忙而不茫",
       sns: {
         github: "Mrzhuo2022",
         twitter: "zhuo1022",
