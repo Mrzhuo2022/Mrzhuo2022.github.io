@@ -1,7 +1,7 @@
 ---
 layout: Post
 title: Git与GitHub工作流
-subtitle: Git Github仓库 开源
+subtitle: Git Github workflow 开源 互联网
 author: Evarle
 date: 2023-09-03
 useHeaderImage: true
@@ -12,6 +12,9 @@ tags:
   - 笔记
 ---
 
+Git的学习笔记，用Git工作和开发太舒服和高效了，配合远程仓库使用。Github的各项免费服务真不错，比如Github Actions。
+<!-- more -->
+---
 ## 什么是Git
 
 Git是一种分布式版本控制系统，用于跟踪和管理软件开发项目中的代码变化。它由Linus Torvalds在2005年创建，并广泛用于管理代码的版本控制、协作开发和代码托管。

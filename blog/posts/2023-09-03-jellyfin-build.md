@@ -2,7 +2,7 @@
 
 layout: Post
 title: Jellyfin私人影音库
-subtitle: 使用docker安装jellyfin搭建私人家庭影音库
+subtitle: docker安装jellyfin搭建私人家庭影音库
 author: Evarle
 date: 2023-09-03
 useHeaderImage: true
@@ -13,6 +13,9 @@ tags:
   - docker
 ---
 
+谁不想拥有一个属于自己的多媒体资源库呢？配合qbittorrent实现自动追番下载，再也不用担心网络差缓存慢的问题了。
+<!-- more -->
+---
 ## 私人媒体库
 
 对于每一个玩NAS的人，应该都会有搭建一个私人的家庭影音中心的想法，用于整理和观看自己喜欢的电影、电视剧和动漫等，而且NAS拥有容量大、易管理并且可以外网访问等优点，在NAS上搭建私人媒体库是很不错的。在NAS上可以搭建个人影音库的方案有很多，现在主流的影音管理方案有三种：Emby、Plex和Jellyfin。前两个需要付费才能解锁高级功能使用，而Jellyfin是完全开源免费的。
