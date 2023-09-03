@@ -152,7 +152,7 @@ export default defineUserConfig({
       },
       {
         text: "About",
-        link: "https://about.evarle.one",
+        link: "https://evarle.one/about/",
         icon: "fa-user-alt"
       }
     ],
