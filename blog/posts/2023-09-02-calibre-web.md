@@ -1,7 +1,7 @@
 ---
 layout: Post
 title: Calibre Web个人图书库
-subtitle: 使用docker安装Calibre Web搭建私人电子图书馆
+subtitle: docker安装Calibre Web搭建私人电子图书馆
 author: Evarle
 date: 2023-09-02
 useHeaderImage: true
@@ -12,6 +12,9 @@ tags:
   - docker
 ---
 
+一个只要有浏览器就能阅读和管理的电子个人图书数据库。
+<!-- more -->
+---
 ## Calibre Web项目
 
 开源项目Calibre Web 是基于Calibre的数据库来建立的一个简洁直观界面的web应用程序。
