@@ -13,4 +13,7 @@ tags:
 ---
 
 ## 你好 vuepress
-基于vuepress和Gungnir生成搭建的个人静态博客网站。
+一个基于vuepress和Gungnir生成搭建的个人静态博客网站。
+
+## hello vuepress
+A blog powered by [VuePress2](https://v2.vuepress.vuejs.org/) and themed by [Gungnir](https://github.com/Renovamen/vuepress-theme-gungnir).

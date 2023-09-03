@@ -55,7 +55,7 @@ export default defineUserConfig({
     personalInfo: {
       name: "Evarle",
       avatar: "/img/avatar.jpg",
-      description: "Evarle的个人博客",
+      description: "Evarle's blog",
       sns: {
         github: "Mrzhuo2022",
         twitter: "zhuo1022",
@@ -96,7 +96,7 @@ export default defineUserConfig({
     // other pages
     pages: {
       tags: {
-        subtitle: "Black Sheep Wall",
+        subtitle: "时光清浅处 一步一安然",
         bgImage: {
           path: "/img/pages/tags.jpg",
           mask: "rgba(211, 136, 37, .5)"
@@ -104,7 +104,7 @@ export default defineUserConfig({
       },
       links: {
         subtitle:
-          "When you are looking at the stars, please put the brightest star shining night sky as my soul.",
+          "半师半友半知己，半慕半尊半倾心",
         bgImage: {
           path: "/img/pages/links.jpg",
           mask: "rgba(64, 118, 190, 0.5)"
@@ -121,7 +121,7 @@ export default defineUserConfig({
         repoId: "R_kgDOKOtffg",
         category: "Announcements",
         categoryId: "DIC_kwDOKOtffs4CZC_r",
-        darkTheme: "https://evarle.one/styles/giscus-dark.css"
+        darkTheme: "https://blog.zxh.io/styles/giscus-dark.css"
       },
       mdPlus: {
         all: true
@@ -136,22 +136,22 @@ export default defineUserConfig({
 
     navbar: [
       {
-        text: "首页",
+        text: "Home",
         link: "/",
         icon: "io-home"
       },
       {
-        text: "标签",
+        text: "Tags",
         link: "/tags/",
         icon: "fa-tag"
       },
       {
-        text: "链接",
+        text: "Links",
         link: "/links/",
         icon: "fa-link"
       },
       {
-        text: "关于",
+        text: "About",
         link: "https://about.evarle.one",
         icon: "fa-user-alt"
       }
