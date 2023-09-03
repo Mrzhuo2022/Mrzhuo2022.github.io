@@ -5,8 +5,8 @@ import { gungnirTheme } from "vuepress-theme-gungnir";
 const isProd = process.env.NODE_ENV === "production";
 
 export default defineUserConfig({
-  title: "Evarle's blog",
-  description: "evarle的个人博客",
+  title: "Evarle zhuo",
+  description: "A student who likes coding. ",
 
   head: [
     [
