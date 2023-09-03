@@ -305,7 +305,7 @@ GitHub是一个基于Web的Git版本控制存储库托管服务。它提供了Gi
 
 * **Github的工作流程图：**
 
-<img src="/img/in-post/2023-09-03/Git And Github Version Control.png" alt="Git And Github Version Control" style="zoom: 150%;" />
+![Version_Control](/img/in-post/2023-09-03/Version_Control.png)
 
 ### Github作为Git远程仓库
 
