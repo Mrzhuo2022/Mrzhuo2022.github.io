@@ -50,7 +50,7 @@ Git菜鸟教程：https://www.runoob.com/git/git-tutorial.html
 
 在Git中，有三个关键概念：工作区（Working Directory），暂存区（Staging Area）和版本库（Repository）。
 
-![Git Diagram](/img/in-post/2023-09-03/Git Diagram.png)
+![GitDiagram](/img/in-post/2023-09-03/GitDiagram.png)
 
 它们之间的关系可以描述如下：
 
