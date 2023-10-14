@@ -1,7 +1,7 @@
 ---
 layout: Post
 title: Linux基础和wsl安装
-subtitle: Linux
+subtitle: Linux Windows子系统 SSH
 author: Evarle
 date: 2023-10-14
 useHeaderImage: true
@@ -10,6 +10,10 @@ headerMask: rgb(67, 65, 47, .2)
 permalinkPattern: /post/:year/:month/:day/:slug/
 tags:
   - 笔记
+---
+
+Linux作为一个开源的操作系统，已经成为计算领域的瑰宝。从服务器到个人电脑，再到嵌入式系统，Linux的广泛应用和灵活性使其在当今的数字时代中不可或缺。
+<!-- more -->
 ---
 ## Linux基础
 Linux 是一种开源操作系统内核，它是基于类 Unix 操作系统的一个重要组成部分。Linux 内核最初由芬兰程序员 Linus Torvalds 在1991年创建，并在之后由全球各地的开发者和社区不断开发和维护。Linux 内核的开源性质意味着任何人都可以查看、修改和分发它的源代码，这使得 Linux 成为一个非常灵活、可定制和强大的操作系统。
