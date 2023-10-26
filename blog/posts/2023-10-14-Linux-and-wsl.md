@@ -32,19 +32,29 @@ Linux 是一种开源操作系统内核，它是基于类 Unix 操作系统的�
   
 ### Linux常用命令
 `uname -a`显示系统信息。
+
 `free -h`显示内存使用情况。
+
 `df -h`显示文件系统磁盘空间使用情况。
+
 `du -sh /path/to/directory`：显示目录的总磁盘使用情况。
+
 `du -h --max-depth=1 /path/to/directory`：限制查看目录的深度，并显示各个一级子目录的磁盘使用情况。
+
 `du -h --max-depth=1 /path/to/directory | sort -h`：按磁盘使用情况排序并显示各个一级子目录的磁盘使用情况。
 
 `lsof` 是一个用于列出打开文件（Open Files）和套接字（Open Sockets）的命令行工具，它用于显示当前系统上正在使用的文件、目录和网络连接的信息。
 
 `lsof /path/to/directory` 显示目录下被打开的文件。
+
 `lsof /path/to/file` 显示特点文件的打开者。
+
 `lsof -i`显示网络连接。
+
 `lsof -i -sTCP:LISTEN` 显示监听的网络连接。
+
 `lsof -i :80` 显示哪个进程在使用80端口。
+
 **软件包管理**
 `apt update -y && apt upgrade -y `自动更新系统的软件包和操作系统，确保系统中的所有软件都是最新的。
 
