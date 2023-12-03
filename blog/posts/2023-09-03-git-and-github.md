@@ -420,11 +420,18 @@ git push origin <branch_name>
 
 默认情况下，提取、拉取和推送将在源存储库上运行。这将是您从中克隆或使用手动 ` git branch --set-upstream-to <origin>` 设置的存储库。
 
+`git branch -al`查看本地和远程的所有分支。
+
+`git checkout <branch_name>` 切换分支。
+
+`git pull`更新本地仓库。
+
 - 执行 `git fetch origin master` 时，它的意思是从名为 **origin** 的远程上拉取名为 **master** 的分支到本地分支 **origin/master** 中。
 - 执行 `git merge origin/master` 时，它的意思是合并名为 **origin/master** 的分支到当前所在分支。需要指定的是被合并的分支。
 - 执行 `git push origin master` 时，它的意思是推送本地的 **master** 分支到远程 **origin**，涉及到远程以及分支，当然也得分开写了。
 - 还可以一次性拉取多个分支的代码：`git fetch origin master stable oldstable`；
 - 也还可以一次性合并多个分支的代码：`git merge origin/master hotfix-2275 hotfix-2276 hotfix-2290`；
+
 
 ### Github Actions
 
