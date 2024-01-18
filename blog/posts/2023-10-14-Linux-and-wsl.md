@@ -403,4 +403,13 @@ windows用户在终端中输入`ssh-keygen -t ed25519 -C "your_email@example.com
 这样本机就能之间连接远程服务器不需要密码了，
 命令行输入`ssh -p 22 root@hostname`直接ssh连接vps服务器。
 
+### 释放WSL2的硬盘空间
+WSL2 使用虚拟硬盘 (VHD) 来存储 Linux 文件，它会自动扩展，但不会自动收缩。所以，即使你删除了Linux里面的文件，VHD 的大小也不会变小。所以要如何释放没用到的磁盘呢。
+> 关于WSL磁盘空间问题，可以参考微软官方这篇文章[如何管理 WSL 磁盘空间](https://learn.microsoft.com/zh-cn/windows/wsl/disk-space)。
 
+* WSL2的磁盘一般挂载在`C:\Users\User\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState\ext4.vhdx`。
+* 首先，使用 `wsl.exe --shutdown` 命令终止所有WSL实例。
+* 然后在管理员模式下打开 Windows 命令提示符，输入 `diskpart` 命令。在 `DISKPART>` 提示符下，输入 `select vdisk file="<pathToVHD>"`选择虚拟磁盘文件，其中 `<pathToVHD>` 是刚刚找的vhd磁盘路径。
+* 使用`detail vdisk` 查看 VHD 的当前大小和可用空间。
+* 压缩文件 `compact vdisk`。
+* 压缩完毕后卸载磁盘 `detach vdisk`。
