@@ -63,7 +63,7 @@ export default defineUserConfig({
         // customized sns
         plog: {
           icon: "hi-solid-photograph",
-          link: "https://plog.evarle.one/"
+          link: "https://plog.evarle.top/"
         },
         rss: "/rss.xml"
       }
@@ -129,7 +129,7 @@ export default defineUserConfig({
       //ga: "",
       //ba: "",
       rss: {
-        siteURL: "https://evarle.one",
+        siteURL: "https://evarle.top",
         copyright: "Evarle 2023"
       }
     },
@@ -152,7 +152,7 @@ export default defineUserConfig({
       },
       {
         text: "About",
-        link: "https://evarle.one/about/",
+        link: "https://evarle.top/about/",
         icon: "fa-user-alt"
       }
     ],
