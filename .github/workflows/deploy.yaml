@@ -8,14 +8,19 @@ on:
 
 jobs:
   build-and-deploy:
+    # 只有当推送到 main 分支时才执行部署，避免在 pull request 时也部署
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
     env:
       NODE_VERSION: '16'
 
+    permissions:
+      contents: write
+
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -39,6 +44,6 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: blog/.vuepress/dist
           cname: evarle.top
