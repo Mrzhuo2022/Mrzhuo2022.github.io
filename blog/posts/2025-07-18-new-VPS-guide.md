@@ -190,6 +190,63 @@ SSH是我们远程管理服务器的唯一入口，保护好它至关重要。
 
    这将显示所有规则和防火墙的当前状态。
 
+### 安装Fail2ban防御工具
+
+[Fail2ban](https://fail2ban.readthedocs.io/en/latest/)，顾名思义是防止后台暴力扫描的软件，通过分析系统日志中的异常行为（如多次登录失败），自动封禁可疑 IP 地址，有效抵御暴力破解攻击。推荐安装
+
+安装`Fail2ban`：
+
+```bash
+sudo apt update && sudo apt install fail2ban 
+```
+
+### **配置 Fail2ban**
+
+1. **创建自定义配置**
+   复制默认配置文件：
+
+   ```bash
+   sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+   ```
+
+2. **编辑配置文件**
+
+   ```bash
+   sudo nano /etc/fail2ban/jail.local
+   ```
+
+   常见配置参数：
+
+   ```ini
+   [DEFAULT]
+   ignoreip = 127.0.0.1/8  # 白名单IP
+   bantime = 3600          # 封禁时长（秒）
+   findtime = 600          # 检测时间段（秒）
+   maxretry = 5            # 最大尝试次数
+   
+   [sshd]                  # SSH服务配置
+   enabled = true          # 启用监控
+   ```
+
+3. **重启服务**
+
+   ```bash
+   sudo systemctl restart fail2ban
+   sudo systemctl enable fail2ban  # 开机自启
+   ```
+
+查看一下状态：
+
+```bash
+sudo fail2ban-client status
+```
+
+检查封禁列表：
+
+```bash
+sudo fail2ban-client status sshd
+```
+
 ### 设置系统时间
 
 将系统时间设置为北京时间，推荐使用 `timedatectl` 命令。
