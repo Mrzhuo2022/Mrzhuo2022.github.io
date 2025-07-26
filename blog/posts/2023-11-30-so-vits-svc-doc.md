@@ -5,7 +5,7 @@ subtitle: Linux AI
 author: Evarle
 date: 2023-11-30
 useHeaderImage: true
-headerImage: /img/in-post/2023-11-30/header.jpeg
+headerImage: /img/in-post/2023-11-30/header.jpg
 headerMask: rgb(67, 65, 47, .2)
 permalinkPattern: /post/:year/:month/:day/:slug/
 tags:

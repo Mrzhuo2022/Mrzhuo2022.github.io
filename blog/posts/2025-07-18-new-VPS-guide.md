@@ -5,7 +5,7 @@ subtitle: Linux VPS Docker
 author: Evarle
 date: 2025-07-18
 useHeaderImage: true
-headerImage: /img/in-post/2025-07-18/header.jpeg
+headerImage: /img/in-post/2025-07-18/header.jpg
 headerMask: rgb(67, 65, 47, .2)
 permalinkPattern: /post/:year/:month/:day/:slug/
 tags:
@@ -13,7 +13,7 @@ tags:
   - docker
 ---
 
-如果你拿到了一个新的VPS不知道要先做什么，或者你有闲置的小鸡怎么玩，这篇文章或许会给你不错的建议或者参考。
+如果你拿到了一个新的VPS不知道要先做什么，或者你有闲置的小鸡不知道干什么，这篇文章或许会给你不错的建议或者参考。
 <!-- more -->
 ---
 ## 拿到新的小鸡（VPS）后，你应该先做什么？
