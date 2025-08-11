@@ -5,7 +5,7 @@ subtitle: Vibe Coding 智能体 独立开发
 author: Evarle
 date: 2025-08-11
 useHeaderImage: true
-headerImage: /img/in-post/2025-08-08/header.jpg
+headerImage: /img/in-post/2025-08-11/header.jpg
 headerMask: rgb(67, 65, 47, .2)
 permalinkPattern: /post/:year/:month/:day/:slug/
 tags:
