@@ -1,6 +1,6 @@
 ---
 layout: Post
-title: 数据库三巨头：PostgreSQL、MySQL和SQLite全方位深度解析
+title: 关系型数据库三巨头：PostgreSQL、MySQL和SQLite全方位深度解析
 subtitle: Datebase SQL RDB
 author: Evarle
 date: 2025-08-08
@@ -13,7 +13,7 @@ tags:
   - 数据库
 ---
 
-当今最流行的三款开源关系型数据库PostgreSQL、MySQL和SQLite核心特性、优势、适用场景及选择策略是什么。RDB（关系型数据库）凭借其通用的数据处理能力、严格的数据一致性保证和不断演进的适应性，始终是大多数复杂应用场景下的“最优解”。
+当今最流行的三款开源关系型数据库PostgreSQL、MySQL和SQLite，关系型数据库凭借其通用的数据处理能力、严格的数据一致性保证和不断演进的适应性，始终是大多数复杂应用场景下的“最优解”。
 <!-- more -->
 ---
 
