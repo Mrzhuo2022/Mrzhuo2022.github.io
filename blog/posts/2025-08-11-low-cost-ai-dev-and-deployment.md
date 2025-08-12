@@ -52,7 +52,7 @@ AI编程省钱之道的核心在于**最大化利用免费或低成本的AI模�
 
 • **Deepseek**：v3和r1版本在其网页界面免费，但需注意上下文限制。Deepseek R1 0528是具有增强推理能力的超智能模型。
 
-• **Grok.com**：少量免费gork4且通常无审查限制，适合通用使用、深度研究和图像编辑。
+• **Grok.com**：少量免费grok4且通常无审查限制，适合通用使用、深度研究和图像编辑。
 
 • **Phind**：免费，尝试展示流程图/图表可视化。
 
@@ -184,11 +184,115 @@ AI 的能力上限受限于你提问的水平。模糊的指令导致猜测，�
 
 
 
- **BMad-Method：通用 AI 代理框架**
+####  **BMad-Method：通用 AI 代理框架**
 
-使用**[BMAD-METHOD](https://github.com/bmad-code-org/BMAD-METHOD)** 进行规划，**BMad** 专门的智能体（分析师、项目经理、架构师）与您协作，创建详细、一致的产品需求文档和架构文档。通过先进的提示工程和人工循环优化，这些规划智能体生成的全面规范远远超出了通用的 AI 任务生成。
+使用**[BMAD-METHOD](https://github.com/bmad-code-org/BMAD-METHOD)** 进行规划，**BMad** 主要的两个功能：
+1. 专门的智能体（分析师、项目经理、架构师）与您协作，创建详细、一致的产品需求文档和架构文档。通过先进的提示工程和人工循环优化，这些规划智能体生成的全面规范远远超出了通用的 AI 任务生成。
+2. 上下文工程化开发：Scrum Master 代理随后将这些详细计划转化为超详细的开发故事，其中包含 Dev 代理所需的一切——完整上下文、实现细节和直接嵌入在故事文件中的架构指导。
 
 
+
+**安装BMad只需运行以下任一命令：**
+
+```bash
+npx bmad-method install
+# OR if you already have BMad installed:
+git pull
+npm run install:bmad
+```
+
+
+
+这里贴一下用户文档指南，这是一个标准的全新项目流程：**[BMAd Code 用户指南](https://github.com/bmad-code-org/BMAD-METHOD/blob/main/docs/user-guide.md)**，如果您打算在现有项目（一个已经存在的项目）中使用 BMad 方法，请查阅 **[在现有项目中工作](./working-in-the-brownfield.md)**。
+
+**全新项目规划最好先在Gemini 网页中进行（免费）不会在IDE中消耗大量token。**
+
+这里讲一下全新项目规划的流程：
+
+​	在开发开始之前，BMad 遵循一个结构化的规划工作流。为实现**成本效益**，该流程最好在 Web UI 中完成。
+
+**a.在AI的Web界面生成开发需求文档和技术文档**
+
+```markdown
+如果您想在 Web 上使用 Claude (Sonnet 4 或 Opus)、Gemini Gem (2.5 Pro) 或自定义 GPT 进行规划：
+
+1.  导航至 `dist/teams/`
+2.  复制 `team-fullstack.txt` 
+3.  创建新的 Gemini Gem 或 CustomGPT
+4.  上传文件并附上说明：“您关键的操作说明已附上，请严格遵守角色设定”
+5.  输入 `/help` 查看可用命令
+```
+
+将这个[*文件*](https://github.com/bmad-code-org/BMAD-METHOD/blob/main/dist/teams/team-fullstack.txt) 作为提示词或者知识库放入AI助手中，然后输入`/help` 可以查看所有命令。输入命令如 `*analyst` 这样的代理直接开始创建简报。然后依照说明开始进行项目规划，比如输入`*create-project-brief “我想使用Next.js 开发一个博客网站”`让AI开始分析创建项目简报，接着跟着流程一步一步来就行，具体流程[参考](https://github.com/bmad-code-org/BMAD-METHOD/blob/main/docs/user-guide.md#the-planning-workflow-web-ui-or-powerful-ide-agents)。
+
+**b.Web UI 到 IDE 的转换**
+
+关键转换点：一旦产品负责人确认文档对齐，您必须从 Web UI 切换到 IDE 以开始开发工作流：
+
+```markdown
+1.  将文档复制到项目：确保 `docs/prd.md` 和 `docs/architecture.md` 位于您项目的 `docs` 文件夹中（或您在安装时指定的自定义位置）。
+2.  切换到 IDE：在您首选的代理 IDE 中打开您的项目。
+3.  文档分片：使用产品负责人（PO）代理先对产品需求文档（PRD）进行分片，然后对架构文档进行分片。
+4.  开始开发：启动接下来的核心开发周期。
+```
+
+将在Web生成的的文件复制到项目的docs文件夹中，先确保项目已经安装BMad了，如果没有在目录终端输入`npx bmad-method install`安装。文档分片工作建议在IDE中进行，毕竟文件太多在Web不方便。使用/po进入产品负责人角色，执行命令 `*shard docs/prd.md`和`*shard docs/architecture.md`分别对需求文档和技术文档进行分片 。接下来具体开发的[流程图](https://github.com/bmad-code-org/BMAD-METHOD/blob/main/docs/user-guide.md#the-core-development-cycle-ide)。
+
+**c.用户故事创建 (Scrum Master)**
+
+```bash
+1.  开始新的聊天/对话
+2.  加载 SM (Scrum Master) 代理
+3.  执行: `*draft` (运行 `create-next-story` 任务)
+4.  审查生成的故事，位于 `docs/stories/`
+5.  更新状态: 将状态从“草稿 (Draft)”更改为“已批准 (Approved)”
+```
+
+在新聊天窗口，接下来的开发[流程](https://github.com/Mrzhuo2022/BMAD-METHOD-zh-CN/blob/main/docs/enhanced-ide-development-workflow.md)，使用/sm 进入Scrum Master角色，执行命令`*draft` 生成开发故事。在docs/stories/文件夹下面的故事觉得没问题后将内容中的**Status**状态改为`Approved`。
+
+**d.用户故事实现 (开发人员)**
+
+```bash
+1.  开始新的聊天/对话
+2.  加载 Dev (开发人员) 代理
+3.  执行: `*develop-story {selected-story}` (运行 `execute-checklist` 任务)
+4.  审查生成的报告，位于 `{selected-story}`
+```
+
+在新聊天窗口，使用/dev选择进入开发人员角色，执行命令`*develop-story 故事名`，让AI进行开发。
+
+**e.用户故事审查 (质量保证)**
+
+```bash
+1.  开始新的聊天/对话
+2.  加载 QA (质量保证) 代理
+3.  执行: `*review {selected-story}` (运行 `review-story` 任务)
+4.  审查生成的报告，位于 `{selected-story}`
+```
+
+在新聊天窗口，使用/qa进入质量测试角色，`*review 故事名`，进行代码审查测试。
+
+提交并推送变更
+
+1.  **提交变更**
+2.  **推送到远程仓库**
+
+ 重复直至完成
+
+-   **SM**: 创建下一个故事 → 审查 → 批准
+-   **Dev**: 实现故事 → 完成 → 标记为待审查
+-   **QA**: 审查故事 → 标记为完成
+-   **提交**: 所有变更
+-   **推送**: 到远程仓库
+-   **继续**: 直到所有功能实现
+
+
+
+使用 BMad-Method 进行现有项目开发，为修改现有系统提供了结构和安全性。关键在于通过文档提供全面的上下文，使用考虑集成需求的专用模板，并遵循尊重现有约束同时又能推动进展的工作流。
+
+请记住：**先文档化，仔细规划，安全集成**
+
+---
 
 ***AI编程的成本节省技巧：***
 
